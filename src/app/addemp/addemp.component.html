@@ -1,0 +1,84 @@
+<app-header></app-header>
+<br>
+<div class="row">
+    <div class="col s12 m3"></div>
+    <div class="col s12 m6">
+        <div class="card teal lighten-5">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="row">
+                            <div class="input-field col s2">
+                                <input id="eid" type="text" class="validate" [(ngModel)]="empdata.eid" disabled>
+                                <label for="eid">Employee ID</label>
+                            </div>
+                            <div class="input-field col s5">
+                                <input id="first_name" type="text" class="validate" [(ngModel)]="empdata.fname">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s5">
+                                <input id="last_name" type="text" class="validate" [(ngModel)]="empdata.lname">
+                                <label for="last_name">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="last_name" type="number" class="validate" [(ngModel)]="empdata.phone"> 
+                                <label for="last_name">Phone</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="email" type="email" class="validate" [(ngModel)]="empdata.email">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="dob" type="date" [(ngModel)]="empdata.dob">
+                                <label for="dob">DOB</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <select [(ngModel)]="empdata.gender">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <label>Gender</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="join_date" type="date" [(ngModel)]="empdata.joindate">
+                                <label for="join_date">Joining Date</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <select [(ngModel)]="empdata.employment">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="Full Time">Full Time</option>
+                                    <option value="Part Time">Part Time</option>
+                                    <option value="Casual">Casual</option>
+                                    <option value="Probation">Probation</option>
+                                </select>
+                                <label>Employment</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="dept_name" type="text" class="validate" [(ngModel)]="empdata.dept">
+                                <label for="dept_name">Department</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="post_name" type="text" class="validate" [(ngModel)]="empdata.post">
+                                <label for="post_name">Designation</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="button" name="action" (click)="add()">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m3"></div>
+</div>

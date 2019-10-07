@@ -1,0 +1,37 @@
+<app-header></app-header>
+<br>
+<div class="container">
+    <table class="highlight">
+        <thead>
+            <tr>
+                <th>EID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Employment</th>
+                <th>Department</th>
+                <th>Designation</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let emp of empdata">
+                <td>{{emp.eid}}</td>
+                <td>{{emp.fname}} {{emp.lname}}</td>
+                <td>{{emp.phone}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.employment}}</td>
+                <td>{{emp.dept}}</td>
+                <td>{{emp.post}}</td>
+                <td><a [routerLink]="['/editemp', emp.eid]"><i class="material-icons" style="color: green">edit</i></a></td>
+                <td><a style="cursor: pointer" (click)="delete(emp.eid)"><i class="material-icons" style="color: red">delete</i></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-footer></app-footer>
+
+            
