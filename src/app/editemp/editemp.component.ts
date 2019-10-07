@@ -41,15 +41,12 @@ export class EditempComponent implements OnInit {
       this.empdata = data[0];
       this.empdata['dob'] = this.datePipe.transform(data[0].dob, 'yyyy-MM-dd');
       this.empdata['joindate'] = this.datePipe.transform(data[0].joindate, 'yyyy-MM-dd');
-
     })
-    
   }
 
   edit(){
     this.emp.editEmp(this.empdata).subscribe();
     this.router.navigateByUrl("/home");
-    
   }
 
 }
